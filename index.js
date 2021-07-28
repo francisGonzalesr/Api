@@ -10,4 +10,4 @@ app.use(cors());
 
 app.use('/users', userRouter);
 
-app.listen(3000, () => console.log('Server listo'));
+app.listen(4000, () => console.log('Server listo'));
