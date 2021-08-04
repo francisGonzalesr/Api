@@ -67,13 +67,9 @@ const updateUser = async (req = request, res = response) => {
         const { uid } = req.params;
         const { body } = req;
         await admin.auth().updateUser(uid, {
-            email: body.email,
-            emailVerified: false,
             phoneNumber: body.phoneNumber,
-            password: body.password,
             displayName: body.displayName,
-            photoURL: 'https://p16-va-default.akamaized.net/img/musically-maliva-obj/1665282759496710~c5_720x720.jpeg',
-            disabled: false,
+         
         });
         res.json({ mensaje: 'Usuario editado' });
     } catch (error) {
